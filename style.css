@@ -1,0 +1,111 @@
+body{
+
+  margin: 0;
+}
+
+article {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle, #181f2c 40%, #0d1119);
+  display: block;
+  position: relative;
+
+
+}
+
+.front {
+
+  position: absolute;
+top: 25vh;
+    left: 31vw;
+
+  font-size: 120px;
+  color: rgba(255, 255, 255, 0.1);
+  line-height: 1.2em;
+
+  z-index: 1;
+}
+
+.front + .front{
+  -webkit-text-fill-color: #fe4745;
+  z-index: 5;
+  animation: liquido 3s ease-out infinite alternate;
+}
+@keyframes liquido {
+  from {
+    clip-path: polygon(100% 0, 100% 100%, 20% 100%, 61% 91%, 94% 47%);
+  }
+  50% {
+    clip-path: polygon(100% 0, 100% 100%, 20% 100%, 59% 52%, 74% 13%);
+  }
+  to {
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 85%, 87% 41%);
+  }
+}
+
+
+h1 {
+ font-family: 'Alatsi';
+
+}
+
+
+h3 {
+
+  font-family: Nixie One;
+color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    font-size: 28px;
+top: 33vh;
+    left: 31vw;
+}
+
+::selection {
+    background: #ff7777;
+    
+}
+
+/*Corazón*/
+
+.corazon {
+  position: relative;
+  
+}
+
+.corazon:before,
+.corazon:after { 
+  position: absolute; 
+  content: "";
+  left: 19px;
+  top: 0;
+  width: 19px;
+  height: 30.4px;
+background: #fe4745;
+  -moz-border-radius: 50px 50px 0 0;
+  border-radius: 50px 50px 0 0;
+  -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+     -moz-transform-origin: 0 100%;
+      -ms-transform-origin: 0 100%;
+       -o-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+}
+.corazon:after {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%;
+     -moz-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+       -o-transform-origin: 100% 100%;
+          transform-origin :100% 100%;
+}
